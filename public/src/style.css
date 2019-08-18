@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:20');
+
+/* Baloo Fonts */
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url(img/media.jpg) center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    color: #069370;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    background: #ccc;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #262626;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #069370;
+    color: #fff;
+    transition: 0.5s
+}
+
+@media (max-width: 1200px) {
+    header {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        background: #ccc;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 30px;
+        color: #069370;
+    }
+    .menu-toggle:before {
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    .menu-toggle.active:before {
+        content: '\f00d';
+    }
+    nav {
+        display: none;
+    }
+    nav.active {
+        display: block;
+        width: 100%;
+    }
+    nav.active ul {
+        display: block;
+    }
+    nav.active ul li a {
+        margin: 0px;
+    }
+}
+
+/* Nav End */
+
+
+/* Grid Box Starts */
+
+.inner-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    color: rgba(32, 30, 30, 0.993);
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.border {
+    width: 160px;
+    height: 2px;
+    background: #82ccdd;
+    /* From http://www.flatuicolorpicker.com/red-rgb-color-code */
+    margin: 40px auto;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-box {
+    max-width: 25.33%;
+    padding: 10px;
+    text-align: center;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.service-icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #82ccdd;
+    color: #82ccdd;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px; 
+    transition: 0.3s linear;
+}
+
+.service-icon {
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+}
+
+.service-box:hover .service-icon {
+    background: #828282;
+    color: #ddd;
+}
+
+.service-title {
+    font-size: 18px; 
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.service-desc {
+    font-size: 14px;
+}
+
+@media screen and (max-width:760px) {
+    .service-box {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .service-box {
+        max-width: 100%;
+    }
+}
+
+/* Payment Starts */
+
+.wrapper {
+    font-family: 'Ubuntu', sans-serif;
+    /* background: #2196f3; */
+    margin: 0 15px;
+}
+
+.payment {
+    background: #f8f8f8;
+    max-width: 360px;
+    margin: 80px auto; 
+    height: auto;
+    padding: 35px;
+    padding-top: 70px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.payment h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #0d3c64;
+}
+
+.form .label {
+    display: block; 
+    color: #555555;
+    margin-bottom: 6px;
+}
+
+.form .input {
+    padding: 13px 0 13px 0px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    word-wrap: 3px;
+    outline: none;
+    font-size: 16px;
+    color: #555555;
+}
+
+.card-grp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-item {
+    width: 48%;
+}
+
+.space {
+    margin-bottom: 20px;
+}
+
+.icon-relative {
+    position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far {
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    font-size: 20px;
+    color: #555555;
+}
+
+.buttonPayment {
+    margin-top: 40px;
+    background: #2196f3;
+    padding: 12px;
+    text-align: center;
+    color: #f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-logo {
+    position: absolute;
+    top: -50px;
+    left: 50px;
+    transform: translate(-50%);
+    width: 100px;
+    height: 100px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    box-shadow: 0 0 5px;
+    text-align: center;
+    line-height: 85px;
+}
+
+
+.payment-logo:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 90px;
+    height: 90px; 
+    background: #2196f3;
+    border-radius: 50%;
+}
+
+.payment-logo p {
+    color: #f8f8f8;
+    position: relative;
+    font-family: 'Baloo Bhaijan', cursive;
+    font-size: 58px;
+}
+
+@media screen and (max-width: 420px) {
+    .card-grp {
+        flex-direction: column;
+    }
+
+    .card-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        margin-bottom: 20px;
+    }
+}
+/* Grid Box Ends */
+
